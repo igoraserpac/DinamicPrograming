@@ -10,7 +10,7 @@
 */
 
 int nSum(int n){
-    int *vector = (int*)malloc((n + 1) * sizeof(int));
+    int vector[n];
     vector[0] = 0;
     for(int i = 0; i < n+1; i++){
         vector[i] = vector[i-1] + i;
