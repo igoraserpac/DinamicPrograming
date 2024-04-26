@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /*
     Problem: Find the sum of the first N numbers.
@@ -9,15 +8,18 @@
     Recurrence relation: f(n) = f(n-1) + n
 */
 
-int nSum(int n){
-    int vector[n];
+long int nSum(long int n){
+    long int vector[n+1];
     vector[0] = 0;
-    for(int i = 0; i < n+1; i++){
+    for(long int i = 1; i < n+1; i++){
         vector[i] = vector[i-1] + i;
     }
     return vector[n];
 }
 
 int main(){
-    printf("sum of the first 1000 numbers: %d\n", nSum(1000));
+    long int n;
+    printf("N: ");
+    scanf("%ld", &n);
+    printf("Sum of the first %ld numbers: %ld\n", n, nSum(n));
 }
