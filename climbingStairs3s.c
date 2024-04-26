@@ -2,7 +2,7 @@
 
 /*
     Problem: 
-        Climbing Stairs
+        Climbing Stairs (3 steps)
 
         You are climbing a stair case. It takes n steps to reach the top.
         Each time you can either climb 1, 2 or 3 steps.
