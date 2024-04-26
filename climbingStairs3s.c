@@ -46,7 +46,7 @@ int main(){
     long int n;
     printf("N: ");
     scanf("%ld", &n);
-    printf("Number of ways to climb to the %ld th stair: %ld\n", n, climbingStairs(n));
-    printf("Number of ways to climb to the %ld th stair: %ld (version with memory optimization)\n", n, improvedClimbingStairs(n));
+    printf("Number of ways to climb to the %ldth stair: %ld\n", n, climbingStairs(n));
+    printf("Number of ways to climb to the %ldth stair: %ld (version with memory optimization)\n", n, improvedClimbingStairs(n));
     return 0;
 }

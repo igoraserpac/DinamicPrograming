@@ -20,21 +20,22 @@ long int climbingStairs(long int n, long int k){
     long int vector[n+1];
     vector[0] = 1;
     vector[1] = 1;
-    for(long int i = 3; i < n+1; i++){
-        for(long int j = 1; j < k; j++){
+    for(long int i = 2; i < n+1; i++){
+        vector[i] = 0;
+        for(long int j = 1; j < k+1; j++){
             if(i-j < 0) continue;
             vector[i] += vector[i-j];
         }
     }
     return vector[n];
 }
- 
+
 int main(){
     long int n, k;
     printf("N: ");
     scanf("%ld", &n);
     printf("K: ");
     scanf("%ld", &k);
-    printf("Number of ways to climb to the %ld th stair: %ld\n", n, climbingStairs(n, k));
+    printf("Number of ways to climb to the %ldth stair: %ld\n", n, climbingStairs(n, k));
     return 0;
 }
